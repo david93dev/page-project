@@ -26,7 +26,7 @@ const Header = () => {
         <Button
           className="font-bold bg-gradient-to-r from-blue-500 to-green-500 
              rounded-lg px-9 py-5 text-md text-white 
-             shadow-[0_0_5px_white]
+             shadow-[0_0_1px_white]
              hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-600 
              transition duration-300"
         >

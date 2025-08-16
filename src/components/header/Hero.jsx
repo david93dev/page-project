@@ -1,5 +1,6 @@
 import hero from "../../assets/img/hero.jpg";
 import { FaArrowRight } from "react-icons/fa6";
+import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
@@ -29,12 +30,12 @@ const Hero = () => {
 
         <div className="flex justify-center items-center gap-5">
 
-          <button className="flex justify-center items-center hover:scale-105 gap-2 mt-6 px-18 py-4 bg-blue-500 hover:bg-green-500 border-2 border-green-500 hover:border-blue-500 rounded-lg text-white font-semibold shadow-lg hover:from-blue-600 hover:to-green-600 transition">
+          <Button className="flex justify-center items-center hover:scale-105 gap-2 mt-6 w-42 py-5 bg-blue-500 hover:bg-green-500 border-2 border-green-500 hover:border-blue-500 rounded-lg text-white font-semibold shadow-lg hover:from-blue-600 hover:to-green-600 transition">
           Saiba mais <FaArrowRight />
-        </button>
-         <button className="flex justify-center items-center hover:scale-105 gap-2 mt-6 px-18 py-4 bg-transparent hover:bg-blue-500 border-2 border-blue-500 hover:border-blue-500 rounded-lg text-blue-500 hover:text-white font-semibold shadow-lg hover:from-blue-600 hover:to-green-600 transition">
+        </Button>
+         <Button className="flex justify-center items-center hover:scale-105 gap-2 mt-6 w-42 py-5 bg-transparent hover:bg-blue-500 border-2 border-blue-500 hover:border-blue-500 rounded-lg text-blue-500 hover:text-white font-semibold shadow-lg hover:from-blue-600 hover:to-green-600 transition">
           Entre em contato
-        </button>
+        </Button>
 
         </div>
 

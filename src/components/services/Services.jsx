@@ -1,8 +1,8 @@
 import React from "react";
-import { BiSupport } from "react-icons/bi";
 import { MdOutlineShield } from "react-icons/md";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { FaMoneyBillWave } from "react-icons/fa";
+import { TbHours24 } from "react-icons/tb";
 
 import Autoplay from "embla-carousel-autoplay";
 
@@ -39,7 +39,7 @@ const Services = () => {
           <CarouselContent className="w-[1200px]">
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <ServicesCard
-                icon={<BiSupport />}
+                icon={<TbHours24 />}
                 title="Atendimento 24h"
                 description="Suporte contínuo aos usuários com equipe especializada disponível 24 horas por dia, 7 dias por semana."
                 items={[
@@ -85,6 +85,7 @@ const Services = () => {
                   "Transações seguras",
                   "Processos otimizados",
                 ]}
+                className="!text-purple-500 marker:!text-purple-500"
               />
             </CarouselItem>
           </CarouselContent>
