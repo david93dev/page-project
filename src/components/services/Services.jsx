@@ -1,9 +1,15 @@
 import { BiSupport } from "react-icons/bi";
+import ServicesCard from "./ServicesCard";
+import { MdOutlineShield } from "react-icons/md";
+import { AiOutlineThunderbolt } from "react-icons/ai";
+import { FaMoneyBillWave } from 'react-icons/fa';
 
 const Services = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-gradient-to-r from-gray-900
-         to-gray-800 ">
+    <div
+      className="flex flex-col justify-center items-center bg-gradient-to-r from-gray-900
+         to-gray-800 "
+    >
       <div className="my-18 ">
         <h2 className="text-center bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent text-2xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">
           Nossa Estrutura Organizacional
@@ -15,26 +21,54 @@ const Services = () => {
       </div>
 
       <div className="flex justify-center items-center mb-18 ">
+        <ServicesCard
+          icon={<BiSupport />}
+          title="Atendimento 24h"
+          description="Suporte contínuo aos usuários com equipe especializada disponível 24 horas por dia, 7 dias por semana."
+          items={[
+            "Suporte especializado contínuo",
+            "Atendimento 24/7",
+            "Resolução rápida de questões",
+          ]}
+        />
 
+        <ServicesCard
+          icon={<MdOutlineShield />}
+          title={"Segurança 24h"}
+          description={
+            "Monitoramento constante e proteção avançada para garantir a segurança das operações e dados dos clientes."
+          }
+          items={[
+            "Monitoramento constante",
+            "Proteção avançada de dados",
+            "Segurança máxima das operações",
+          ]}
+          className={"!text-green-500 marker:!text-green-500"}
+        />
 
-        <div
-          className="border-2 rounded-2xl border-gray-600 bg-gradient-to-r from-gray-900
-         to-gray-800 w-sm space-y-5 px-6 py-5 hover:shadow-[0_0_9px_white]"
-        >
-          <BiSupport className="text-blue-500 text-7xl" />
-          <h3 className="text-2xl text-white font-bold">Atendimento 24h</h3>
-          <p className="text-lg text-gray-400">
-            Suporte contínuo aos usuários com equipe especializada disponível 24
-            horas por dia, 7 dias por semana.
-          </p>
-          <ul className="list-disc list-inside space-y-2 marker:text-2xl marker:text-blue-500">
-            <li className="text-gray-400">Suporte especializado contínuo</li>
-            <li className="text-gray-400">Atendimento 24/7</li>
-            <li className="text-gray-400">Resolução rápida de questões</li>
-          </ul>
-        </div>
-
-        
+        <ServicesCard
+          icon={<AiOutlineThunderbolt />}
+          title={"Marketing"}
+          description={
+            "Estratégias inovadoras de marketing digital e posicionamento de marca no mercado brasileiro."
+          }
+          items={[
+            "Marketing digital inovador",
+            "Posicionamento estratégico",
+            "Foco no mercado brasileiro",
+          ]}
+          className={"!text-amber-500 marker:!text-amber-500"}
+        />
+        <ServicesCard
+          icon={<FaMoneyBillWave />}
+          title="Financeiro"
+          description="Gestão financeira robusta com processos otimizados para transações seguras e eficientes."
+          items={[
+            "Gestão financeira robusta",
+            "Transações seguras",
+            "Processos otimizados",
+          ]}
+        />
       </div>
     </div>
   );

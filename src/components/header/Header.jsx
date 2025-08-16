@@ -7,7 +7,7 @@ import logo from "../../assets/img/logo.png"
 const Header = () => {
   return (
     <div
-      className="flex fixed justify-between items-center w-full z-50 px-40 2xl:px-72 py-6 bg-gray-950
+      className="flex fixed justify-between items-center w-full z-50 px-40 2xl:px-72 py-6 bg-gray-800
      text-white border-b-1 border-gray-700"
     >
       <div className="w-29">
