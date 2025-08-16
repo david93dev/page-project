@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gray-950/80" />
 
       {/* Conteúdo sobre a imagem */}
-      <div className="mt-35 absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+      <div className="mt-18 absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <h1 className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent text-4xl md:text-2xl lg:text-6xl 2xl:text-7xl font-bold drop-shadow-lg">
           LMR Tech Solutions
         </h1>
