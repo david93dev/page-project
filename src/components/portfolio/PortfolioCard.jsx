@@ -1,30 +1,65 @@
-import React from "react";
+import { Button } from "../ui/button";
 
-const PortfolioCard = ({ icon, title, description, items = [], className }) => {
+const PortfolioCard = ({
+  smallLogo,
+  smallLogoAlt = "",
+  bigLogo,
+  bigLogoAlt = "",
+  badgeText = "",
+  description = "",
+  features = [],
+  btnText = "Visitar Site",
+  href,
+  onClick,
+  iconClass = "",
+  listClass = "",
+  buttonClass = "",
+}) => {
+  // Botão como link (se tiver href) ou como botão (onClick)
+  const ButtonWrap = ({ children }) =>
+    href ? (
+      <a href={href} target="_blank" rel="noopener noreferrer" className="w-full">
+        {children}
+      </a>
+    ) : (
+      <div className="w-full" onClick={onClick}>
+        {children}
+      </div>
+    );
+
   return (
-    <div
-      className={`flex flex-col h-full min-h-[360px] sm:min-h-[420px]
-                  border-2 rounded-2xl border-gray-600 
-                  bg-gradient-to-r from-gray-900 to-gray-800 
-                  px-6 py-5 hover:shadow-[0_0_9px_green]`}
-    >
-      {/* conteúdo */}
-      <div className="space-y-4 flex-1">
-        <div className={`text-blue-500 text-6xl ${className}`}>{icon}</div>
-        <h3 className="text-2xl text-white font-bold">{title}</h3>
-        <p className="text-md text-gray-300 max-w-[300px]">{description}</p>
+    <div className={`w-full sm:w-[60%] lg:w-[35%] 2xl:w-[30%] rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 p-5`}>
+      {/* Topo: logo pequeno + badge */}
+      <div className="flex justify-between items-center">
+        <img src={smallLogo} alt={smallLogoAlt} className="w-12 h-12 rounded-sm" />
+        {badgeText ? (
+          <div className={`text-xs px-2 py-1 rounded-full text-center ${iconClass}`}>
+            {badgeText}
+          </div>
+        ) : null}
+      </div>
 
-        {items.length > 0 && (
-          <ul
-            className={`list-disc list-inside text-sm marker:text-lg marker:text-blue-500 ${className}`}
-          >
-            {items.map((item, index) => (
-              <li key={index} className="text-gray-400">
-                {item}
-              </li>
+      {/* Conteúdo */}
+      <div className="mt-8 space-y-5">
+        {bigLogo ? <img src={bigLogo} alt={bigLogoAlt} className="w-[120px]" /> : null}
+
+        {description ? (
+          <p className="text-md text-gray-400 max-w-[300px]">{description}</p>
+        ) : null}
+
+        {features?.length > 0 ? (
+          <ul className={`list-disc list-inside text-sm marker:text-lg ${listClass} text-white space-y-1`}>
+            {features.map((f, i) => (
+              <li key={i}>{f}</li>
             ))}
           </ul>
-        )}
+        ) : null}
+
+        <div className="flex justify-center items-center">
+          <Button className={`w-full text-white ${buttonClass}`}>
+            <ButtonWrap>{btnText}</ButtonWrap>
+          </Button>
+        </div>
       </div>
     </div>
   );

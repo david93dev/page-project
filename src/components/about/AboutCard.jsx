@@ -1,7 +1,7 @@
 const AboutCard = ({ icon, textIcon, description, className = "" }) => {
   return (
     <div
-      className="w-full h-30 sm:w-full sm:h-65 rounded-2xl border-2 border-gray-600
+      className="w-full h-30 sm:h-65 rounded-2xl border-2 border-gray-600
                  bg-gradient-to-r from-gray-900 to-gray-800"
     >
       <div className="flex h-full w-full flex-col items-center justify-center text-center gap-2">
