@@ -1,4 +1,6 @@
-const ServicesCard = ({ icon, title, description, items = [], className }) => {
+import React from "react";
+
+const PortfolioCard = ({ icon, title, description, items = [], className }) => {
   return (
     <div
       className={`flex flex-col h-full min-h-[360px] sm:min-h-[420px]
@@ -13,16 +15,19 @@ const ServicesCard = ({ icon, title, description, items = [], className }) => {
         <p className="text-md text-gray-300 max-w-[300px]">{description}</p>
 
         {items.length > 0 && (
-          <ul className={`list-disc list-inside text-sm marker:text-lg marker:text-blue-500 ${className}`}>
+          <ul
+            className={`list-disc list-inside text-sm marker:text-lg marker:text-blue-500 ${className}`}
+          >
             {items.map((item, index) => (
-              <li key={index} className="text-gray-400">{item}</li>
+              <li key={index} className="text-gray-400">
+                {item}
+              </li>
             ))}
           </ul>
         )}
       </div>
-
     </div>
   );
 };
 
-export default ServicesCard;
+export default PortfolioCard;
