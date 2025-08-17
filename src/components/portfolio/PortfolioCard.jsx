@@ -28,7 +28,7 @@ const PortfolioCard = ({
     );
 
   return (
-    <div className={`w-full sm:w-[60%] lg:w-[35%] 2xl:w-[30%] rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 p-5`}>
+    <div className={`w-full sm:w-[60%] lg:w-[35%] 2xl:w-[22%] rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 p-5`}>
       {/* Topo: logo pequeno + badge */}
       <div className="flex justify-between items-center">
         <img src={smallLogo} alt={smallLogoAlt} className="w-12 h-12 rounded-sm" />
