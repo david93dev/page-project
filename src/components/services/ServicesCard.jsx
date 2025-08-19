@@ -4,7 +4,7 @@ const ServicesCard = ({ icon, title, description, items = [], className }) => {
       className={`flex flex-col h-full min-h-[360px] sm:min-h-[420px]
                   border-2 rounded-2xl border-gray-600 
                   bg-gradient-to-r from-gray-900 to-gray-800 
-                  px-6 py-5 hover:shadow-[0_0_9px_green]`}
+                  px-6 py-5 hover:shadow-[0_0_9px_white] transition duration-300`}
     >
       {/* conteúdo */}
       <div className="space-y-4 flex-1">

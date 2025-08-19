@@ -8,9 +8,15 @@ import { TbClockHour4 } from "react-icons/tb";
 
 const About = () => {
   return (
-    <section className="w-full bg-gray-950">
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+    <section  className="w-full bg-gray-950">
+     <div id="sobre" 
+          data-aos="fade-down"
+          data-aos-offset="120"
+          data-aos-delay="100"
+          data-aos-anchor-placement="top-bottom"
+     className="container mx-auto px-4 py-16">
+       <div className="container mx-auto px-4 py-16">
+        <div  className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
           {/* Coluna de texto */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
             <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-200 leading-tight [text-wrap:balance]">
@@ -90,6 +96,7 @@ const About = () => {
           </div>
         </div>
       </div>
+     </div>
     </section>
   );
 };

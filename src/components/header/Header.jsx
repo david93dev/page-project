@@ -13,16 +13,16 @@ const Header = () => {
       <div className="flex justify-between items-center h-18  px-6 lg:px-35 py-4">
         {/* Logo */}
         <div className="w-24">
-          <img src={logo} alt="Logo" className="object-cover w-full h-auto" />
+          <a href="#"><img src={logo} alt="Logo" className="object-cover w-full h-auto" /></a>
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8 items-center">
           <ul className="flex gap-8">
-            <li className="hover:text-green-500 cursor-pointer">Serviços</li>
-            <li className="hover:text-green-500 cursor-pointer">Sobre</li>
-            <li className="hover:text-green-500 cursor-pointer">Portfolio</li>
-            <li className="hover:text-green-500 cursor-pointer">Contato</li>
+            <a href="#servicos"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Serviços</li></a>
+            <a href="#sobre"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Sobre</li></a>
+            <a href="#portifolio"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Portfolio</li></a>
+            <a href="#contato"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Contato</li></a>
           </ul>
 
           
@@ -31,10 +31,10 @@ const Header = () => {
         <div className="hidden md:block">
           <Button
             className=" py-3 font-bold bg-gradient-to-r from-blue-500 to-green-500 
-              rounded-lg text-white shadow-[0_0_1px_white]
+              rounded-lg text-white hover:scale-105
               hover:from-blue-600 hover:to-green-600 transition duration-300 flex items-center gap-2"
           >
-            <HiArrowTrendingUp /> Fale conosco
+             Fale conosco
         </Button>
         </div>
 
@@ -51,10 +51,10 @@ const Header = () => {
       {menuOpen && (
         <div className="md:hidden px-6 py-4 space-y-4 bg-gray-800 border-t border-gray-700">
           <ul className="flex flex-col gap-4">
-            <li className="hover:text-green-500 cursor-pointer">Serviços</li>
-            <li className="hover:text-green-500 cursor-pointer">Sobre</li>
-            <li className="hover:text-green-500 cursor-pointer">Portfolio</li>
-            <li className="hover:text-green-500 cursor-pointer">Contato</li>
+            <a href="#servicos"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Serviços</li></a>
+            <a href="#sobre"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Sobre</li></a>
+            <a href="#portifolio"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Portfolio</li></a>
+            <a href="#contato"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Contato</li></a>
           </ul>
 
           <Button
@@ -62,7 +62,7 @@ const Header = () => {
               rounded-lg py-3 text-white shadow-[0_0_1px_white]
               hover:from-blue-600 hover:to-green-600 transition duration-300 flex items-center justify-center gap-2"
           >
-            <HiArrowTrendingUp /> Fale conosco
+             Fale conosco
           </Button>
         </div>
       )}

@@ -41,7 +41,9 @@ const PortfolioCard = ({
 
       {/* Conteúdo */}
       <div className="mt-8 space-y-5">
-        {bigLogo ? <img src={bigLogo} alt={bigLogoAlt} className="w-[120px]" /> : null}
+        <div className="h-16 w-36 flex justify-center items-center">
+          {bigLogo ? <img src={bigLogo} alt={bigLogoAlt} className="object-cover" /> : null}
+        </div>
 
         {description ? (
           <p className="text-md text-gray-400 max-w-[300px]">{description}</p>

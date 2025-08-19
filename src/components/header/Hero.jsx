@@ -1,4 +1,4 @@
-import hero from "../../assets/img/hero.jpg";
+import hero from "../../assets/img/hero5.jpg";
 import { FaArrowRight } from "react-icons/fa6";
 import { Button } from "../ui/button";
 
@@ -14,13 +14,13 @@ const Hero = () => {
       />
 
       {/* Overlay (degradê preto transparente) */}
-      <div className="absolute inset-0 bg-gray-950/80" />
+      <div className="absolute inset-0 bg-gray-950/85" />
 
       {/* Conteúdo sobre a imagem */}
       <div className="mt-18 md:mt-26 absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <h1 className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent text-4xl
+        <h1 className=" text-4xl text-gray-200
          md:text-5xl lg:text-6xl 2xl:text-7xl font-bold drop-shadow-lg">
-          LMR Tech Solutions
+          LMR <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">Tech Solutions</span>
         </h1>
         <p className="mt-6 text-white text-lg md:text-xl 2xl:text-2xl max-w-2xl drop-shadow">
           Soluções inovadoras para o mercado de apostas no Brasil
@@ -31,10 +31,16 @@ const Hero = () => {
 
         <div className="flex justify-center items-center gap-5">
 
-          <Button className="flex justify-center items-center hover:scale-105 text-xs gap-2 mt-6 w-28 md:w-42 py-5 bg-blue-500 hover:bg-green-500 border-2 border-green-500 hover:border-blue-500 rounded-lg text-white font-semibold shadow-lg hover:from-blue-600 hover:to-green-600 transition">
+          <Button className="flex justify-center items-center 
+          hover:scale-105 text-xs gap-2 mt-6 w-28 md:w-42 py-5 bg-blue-500 hover:bg-blue-400
+            hover:border-blue-500 rounded-lg text-white font-semibold shadow-lg
+             transition">
           Saiba mais <FaArrowRight />
         </Button>
-         <Button className="flex justify-center items-center hover:scale-105 text-xs gap-2 mt-6 w-28 md:w-42 py-5 bg-transparent hover:bg-blue-500 border-2 border-blue-500 hover:border-blue-500 rounded-lg text-blue-500 hover:text-white font-semibold shadow-lg hover:from-blue-600 hover:to-green-600 transition">
+         <Button className="flex justify-center items-center 
+         hover:scale-105 text-xs gap-2 mt-6 w-28 md:w-42 py-5 bg-transparent hover:bg-blue-400 border
+          border-blue-500 hover:border-blue-500 rounded-lg text-blue-500 hover:text-white 
+          font-semibold shadow-lg transition">
           Entre em contato
         </Button>
 
@@ -42,7 +48,7 @@ const Hero = () => {
 
          <div className="flex justify-center  items-center gap-5 md:gap-18 mt-12 2xl:mt-18">
           <div>
-            <h3 className="text-green-500 font-extrabold text-2xl 2xl:text-4xl">24/7</h3>
+            <h3 className="text-blue-500 font-extrabold text-2xl 2xl:text-4xl">24/7</h3>
             <p className="text-sm 2xl:text-lg text-gray-300">Operação Contínua</p>
           </div>
           <div>
@@ -50,7 +56,7 @@ const Hero = () => {
             <p className="text-sm 2xl:text-lg text-gray-300" >Sites em Operação</p>
           </div>
           <div>
-            <h3 className="text-amber-500 font-extrabold text-2xl 2xl:text-4xl" >5+</h3>
+            <h3 className="text-blue-500 font-extrabold text-2xl 2xl:text-4xl" >5+</h3>
             <p className="text-sm 2xl:text-lg text-gray-300" >Anos de Experiência</p>
           </div>
         </div>

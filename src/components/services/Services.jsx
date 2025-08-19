@@ -3,7 +3,6 @@ import { MdOutlineShield } from "react-icons/md";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { TbHours24 } from "react-icons/tb";
-
 import ServicesCard from "./ServicesCard";
 
 const SERVICES = [
@@ -42,12 +41,21 @@ const SERVICES = [
 
 const Services = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-gray-800 py-12">
+    <section id="servicos" className="bg-gradient-to-r from-gray-900 to-gray-800 py-12 scroll-mt-28">
       <div className="container mx-auto px-4">
-        <div className="mb-8 max-w-4xl mx-auto">
-          <h2 className="text-center bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent
-                         text-2xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg
-                         leading-tight tracking-tight [text-wrap:balance]">
+        {/* Cabeçalho */}
+        <div
+          className="mb-8 max-w-4xl mx-auto"
+          data-aos="fade-up"
+          data-aos-offset="120"
+          data-aos-delay="100"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <h2
+            className="text-center bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent
+                       text-2xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg
+                       leading-tight tracking-tight [text-wrap:balance]"
+          >
             Nossa Estrutura Organizacional
           </h2>
 
@@ -57,12 +65,15 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Cards em Flex responsivo */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Cards em Grid responsivo */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
           {SERVICES.map((svc, idx) => (
             <div
               key={svc.title + idx}
-              className="flex justify-center items-center"
+              className="h-full transform-gpu"
+              data-aos="zoom-in"
+              data-aos-delay={idx * 120}       // efeito cascata
+              data-aos-offset="120"
             >
               <ServicesCard
                 icon={svc.icon}
@@ -75,7 +86,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
