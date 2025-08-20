@@ -9,14 +9,7 @@ const Galery = () => {
   const [openImg3, setOpenImg3] = useState(false);
   return (
     <section className="bg-gradient-to-r w-auto sm:w-full from-gray-900 to-gray-800 py-12 scroll-mt-28">
-      <div 
-      className="mb-8 max-w-4xl mx-auto"
-        data-aos="zoom-in"
-        data-aos-offset="120"
-        data-aos-delay="100"
-        data-aos-anchor-placement="top-bottom"
-      className="container mx-auto px-4">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-6 overflow-auto">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-6 overflow-auto">
         {/* Imagem pequena */}
         <div className="w-60 md:w-96 lg:w-128 relative transition-all duration-300">
           <img
@@ -81,7 +74,6 @@ const Galery = () => {
             />
           </div>
         )}
-      </div>
       </div>
     </section>
   );
