@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 
 
-@import "tailwindcss";
 
 /* Inter = base; Roboto = títulos */
 :root {
@@ -137,4 +136,10 @@ h1, h2, h3, .heading {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

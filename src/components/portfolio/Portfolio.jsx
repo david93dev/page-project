@@ -29,7 +29,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-8 ">
+        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 mt-8 ">
           <PortfolioCard
             smallLogo={x2bet}
             smallLogoAlt="x2bet logo"
@@ -43,7 +43,6 @@ const Portfolio = () => {
               "Cassino online completo",
               "Deshboard aperfeiçoado",
             ]}
-            btnText="Visitar Site"
             href="https://x2bet.com"
             iconClass="bg-orange-600 text-orange-200"
             listClass="marker:text-orange-600"
@@ -68,6 +67,7 @@ const Portfolio = () => {
             listClass="marker:text-pink-600"
             buttonClass="bg-pink-600 hover:bg-pink-700"
           />
+         
         </div>
       </div>
     </div>
