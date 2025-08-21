@@ -20,11 +20,11 @@ const ContactSection = () => {
       >
         <div>
           <h2
-            className="text-center text-white text-2xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg
+            className="text-center text-white text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg
                          leading-tight tracking-tight [text-wrap:balance]"
           >
             Entre em{" "}
-            <span className="bg-gradient-to-r from-amber-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
               Contato
             </span>
           </h2>
@@ -171,7 +171,7 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-500 to-green-500
-                 hover:from-blue-600 hover:to-green-600 text-white font-bold py-3 rounded-lg mt-2"
+                 hover:from-green-500 hover:to-blue-500 transition-colors duration-300 hover:scale-101 text-white font-bold py-3 rounded-lg mt-2"
                 >
                   Enviar Mensagem
                 </Button>

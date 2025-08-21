@@ -17,11 +17,11 @@ const Portfolio = () => {
       >
         <div>
           <h2
-            className="text-center bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent
-                         text-2xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg
+            className="text-center text-white
+                         text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg
                          leading-tight tracking-tight [text-wrap:balance]"
           >
-            Nossos Sites em Operação
+            Nossos <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">Sites em Operação</span> 
           </h2>
           <p className="text-center mt-6 text-white text-base md:text-lg lg:text-xl max-w-prose mx-auto leading-relaxed text-pretty">
             Plataformas já consolidadas no mercado brasileiro, demonstrando

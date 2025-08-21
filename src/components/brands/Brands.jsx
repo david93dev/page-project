@@ -39,7 +39,7 @@ export default function Brands() {
         data-aos-anchor-placement="top-bottom"
       >
         <div className="mx-auto max-w-screen-xl px-4">
-          <h2 className="text-center bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent text-2xl md:text-3xl lg:text-5xl font-bold leading-tight tracking-tight">
+          <h2 className="text-center text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
             Parceiros
           </h2>
 

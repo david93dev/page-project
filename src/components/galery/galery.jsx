@@ -11,7 +11,7 @@ const Galery = () => {
     <section className="bg-gradient-to-r w-auto sm:w-full from-gray-900 to-gray-800 py-12 scroll-mt-28">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-6 overflow-auto">
         {/* Imagem pequena */}
-        <div className="w-60 md:w-96 lg:w-128 relative transition-all duration-300">
+        <div className="w-68 md:w-96 lg:w-128 relative transition-all duration-300">
           <img
             src={img1}
             alt="Exemplo"
@@ -19,7 +19,7 @@ const Galery = () => {
             onClick={() => setOpenImg1(true)}
           />
         </div>
-        <div className="w-60 md:w-96 lg:w-128 relative transition-all duration-300">
+        <div className="w-68 md:w-96 lg:w-128 relative transition-all duration-300">
           <img
             src={img2}
             alt="Exemplo"
@@ -27,7 +27,7 @@ const Galery = () => {
             onClick={() => setOpenImg2(true)}
           />
         </div>
-        <div className="w-60 md:w-96 lg:w-128 relative transition-all duration-300">
+        <div className="w-68 md:w-96 lg:w-128 relative transition-all duration-300">
           <img
             src={img3}
             alt="Exemplo"

@@ -19,9 +19,9 @@ const About = () => {
         <div  className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
           {/* Coluna de texto */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-200 leading-tight [text-wrap:balance]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200 leading-tight [text-wrap:balance]">
               Sobre a{" "}
-              <span className="bg-gradient-to-r from-amber-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent drop-shadow-lg">
                 LMR Tech Solutions
               </span>
             </h2>
@@ -63,9 +63,9 @@ const About = () => {
 
             <div className="w-full max-w-prose flex justify-center lg:justify-start">
               <Button
-                className="font-bold bg-gradient-to-r from-amber-500 to-indigo-500 
+                className="font-bold bg-gradient-to-r from-blue-500 to-green-500 
                            rounded-lg px-6 py-4 text-white shadow-[0_0_1px_white]
-                           hover:from-amber-600 hover:to-indigo-600 
+                           hover:from-green-500 hover:to-blue-500 
                            transition duration-300 hover:scale-105"
               >
                 Conheça Nossa História

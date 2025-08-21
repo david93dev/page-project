@@ -32,7 +32,7 @@ const Header = () => {
           <Button
             className=" py-3 font-bold bg-gradient-to-r from-blue-500 to-green-500 
               rounded-lg text-white hover:scale-105
-              hover:from-blue-600 hover:to-green-600 transition duration-300 flex items-center gap-2"
+              hover:from-green-500 hover:to-blue-600 transition duration-300 flex items-center gap-2"
           >
              Fale conosco
         </Button>
