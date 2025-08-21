@@ -12,7 +12,7 @@ const CardContact = ({icon, title, text}) => {
           {icon}
         </div>
         <div>
-          <h2 className="text-lg text-white">{title}l</h2>
+          <h2 className="text-lg text-white">{title}</h2>
           <p className="text-gray-400 text-xs sm:text-sm">
             {text}
           </p>
