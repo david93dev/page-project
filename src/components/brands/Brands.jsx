@@ -31,7 +31,9 @@ export default function Brands() {
   const slides = chunk(logos, 9);
 
   return (
-    <section className="py-18 bg-gray-950">
+    <section
+    id="parceiros"
+    className="py-18 bg-gray-950">
       <div
         data-aos="fade-up"
         data-aos-offset="120"

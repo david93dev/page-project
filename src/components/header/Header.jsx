@@ -13,19 +13,40 @@ const Header = () => {
       <div className="flex justify-between items-center h-18  px-6 lg:px-35 py-4">
         {/* Logo */}
         <div className="w-24">
-          <a href="#"><img src={logo} alt="Logo" className="object-cover w-full h-auto" /></a>
+          <a href="#">
+            <img src={logo} alt="Logo" className="object-cover w-full h-auto" />
+          </a>
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8 items-center">
           <ul className="flex gap-8">
-            <a href="#servicos"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Serviços</li></a>
-            <a href="#sobre"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Sobre</li></a>
-            <a href="#portifolio"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Portfolio</li></a>
-            <a href="#contato"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Contato</li></a>
+            <a href="#servicos">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Serviços
+              </li>
+            </a>
+            <a href="#sobre">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Sobre
+              </li>
+            </a>
+            <a href="#portifolio">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Portfolio
+              </li>
+            </a>
+            <a href="#parceiros">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Parceiros
+              </li>
+            </a>
+            <a href="#contato">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Contato
+              </li>
+            </a>
           </ul>
-
-          
         </nav>
 
         <div className="hidden md:block">
@@ -34,8 +55,8 @@ const Header = () => {
               rounded-lg text-white hover:scale-105
               hover:from-green-500 hover:to-blue-600 transition duration-300 flex items-center gap-2"
           >
-             Fale conosco
-        </Button>
+            Fale conosco
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -51,10 +72,31 @@ const Header = () => {
       {menuOpen && (
         <div className="md:hidden px-6 py-4 space-y-4 bg-gray-800 border-t border-gray-700">
           <ul className="flex flex-col gap-4">
-            <a href="#servicos"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Serviços</li></a>
-            <a href="#sobre"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Sobre</li></a>
-            <a href="#portifolio"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Portfolio</li></a>
-            <a href="#contato"><li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">Contato</li></a>
+            <a href="#servicos">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Serviços
+              </li>
+            </a>
+            <a href="#sobre">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Sobre
+              </li>
+            </a>
+            <a href="#portifolio">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Portfolio
+              </li>
+            </a>
+             <a href="#parceiros">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Parceiros
+              </li>
+            </a>
+            <a href="#contato">
+              <li className="hover:underline underline-offset-2 hover:scale-105 cursor-pointer">
+                Contato
+              </li>
+            </a>
           </ul>
 
           <Button
@@ -62,7 +104,7 @@ const Header = () => {
               rounded-lg py-3 text-white shadow-[0_0_1px_white]
               hover:from-blue-600 hover:to-green-600 transition duration-300 flex items-center justify-center gap-2"
           >
-             Fale conosco
+            Fale conosco
           </Button>
         </div>
       )}
