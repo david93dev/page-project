@@ -26,6 +26,7 @@ const ContactSection = () => {
     };
     emailJs.send(serviceId, templateId, templateParams, publicKey)
     .then((response) => {console.log("EMAIL ENVIADO", response.status);
+      alert("Email enviado")
     })
     .catch((error) => {
       console.error("Erro ao enviar email:", error);
@@ -70,19 +71,19 @@ const ContactSection = () => {
                 <CardContact
                   icon={<HiOutlineMail />}
                   title="Email"
-                  text="contato@lmrtechsolutions.com.br"
+                  text="comercial@pixdaalegria.com.br"
                 />
 
                 <CardContact
                   icon={<BsTelephone />}
                   title="Telefone"
-                  text="+55 (11) 99999-9999"
+                  text="+55 (11) 95817-9896"
                 />
 
                 <CardContact
                   icon={<LuMapPin />}
                   title="Localização"
-                  text="São Paulo, Brasil"
+                  text="Campina Grande, PB"
                 />
               </div>
             </div>

@@ -36,9 +36,9 @@ const Footer = () => {
         <div>
             <h2 className="text-lg font-bold text-white mt-4">Contato</h2>
             <ul className="mt-2 space-y-2">
-                <li><a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white"><HiOutlineMail /> contato@lmrtechsolutions.com.br</a></li>
-                <li><a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white"><BsTelephone/>+55 (11) 99999-9999</a></li>
-                <li><a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white"><LuMapPin />São Paulo, Brasil</a></li>
+                <li><a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white"><HiOutlineMail /> comercial@pixdaalegria.com.br</a></li>
+                <li><a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white"><BsTelephone/>+55 (11) 95817-9896</a></li>
+                <li><a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white"><LuMapPin />Campina Grande, PB</a></li>
             </ul>
         </div>
     </div> 
