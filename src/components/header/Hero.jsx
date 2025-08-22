@@ -40,7 +40,7 @@ const Hero = () => {
           estrategicamente para a regulamentação do mercado brasileiro.
         </p>
 
-        <div className="flex flex-col sm:flex-row mt-6 justify-center items-center gap-2">
+        <div className="flex flex-row flex-wrap mt-6 justify-center items-center gap-2">
           <Button
             onClick={() => (window.location.href = "#servicos")}
             className="flex justify-center items-center 

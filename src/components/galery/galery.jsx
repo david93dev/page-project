@@ -1,82 +1,134 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../../assets/img/img1.png";
 import img2 from "../../assets/img/img2.png";
 import img3 from "../../assets/img/img3.png";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronRight } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-const Galery = () => {
-  const [openImg1, setOpenImg1] = useState(false);
-  const [openImg2, setOpenImg2] = useState(false);
-  const [openImg3, setOpenImg3] = useState(false);
+export default function Galery() {
+  const images = [
+    { src: img1, alt: "Imagem 1" },
+    { src: img2, alt: "Imagem 2" },
+    { src: img3, alt: "Imagem 3" },
+    // adicione mais aqui… quando passar de 3 ativa o carousel
+  ];
+
+  const useCarousel = images.length > 3;
+
+  // lightbox
+  const [active, setActive] = useState(null);
+  const isOpen = active !== null;
+
+  // ESC para fechar e travar scroll quando aberto
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e) => e.key === "Escape" && setActive(null);
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
-    <section className="bg-gradient-to-r w-auto sm:w-full from-gray-900 to-gray-800 py-12 scroll-mt-28">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-6 overflow-auto">
-        {/* Imagem pequena */}
-        <div className="w-68 md:w-96 lg:w-128 relative transition-all duration-300">
-          <img
-            src={img1}
-            alt="Exemplo"
-            className="rounded-lg "
-            onClick={() => setOpenImg1(true)}
-          />
-        </div>
-        <div className="w-68 md:w-96 lg:w-128 relative transition-all duration-300">
-          <img
-            src={img2}
-            alt="Exemplo"
-            className="rounded-lg"
-            onClick={() => setOpenImg2(true)}
-          />
-        </div>
-        <div className="w-68 md:w-96 lg:w-128 relative transition-all duration-300">
-          <img
-            src={img3}
-            alt="Exemplo"
-            className="rounded-lg"
-            onClick={() => setOpenImg3(true)}
-          />
-        </div>
-
-        {/* Modal */}
-        {openImg1 && (
-          <div
-            onClick={() => setOpenImg1(false)}
-            className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-md z-50"
-          >
-            <img
-              src={img1}
-              alt="Exemplo grande"
-              className="max-w-[90%] max-h-[90%] rounded-xl shadow-lg"
-            />
-          </div>
-        )}
-        {openImg2 && (
-          <div
-            onClick={() => setOpenImg2(false)}
-            className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-md z-50"
-          >
-            <img
-              src={img2}
-              alt="Exemplo grande"
-              className="max-w-[90%] max-h-[90%] rounded-xl shadow-lg"
-            />
+    <section className="bg-gradient-to-r from-gray-900 to-gray-800 py-12 scroll-mt-28">
+      <div className="mx-auto max-w-screen-2xl px-4">
+        {/* <= 3 imagens: grade simples */}
+        {!useCarousel && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {images.map((img, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => setActive(idx)}
+                className="group block overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-64 md:h-74 object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </button>
+            ))}
           </div>
         )}
 
-        {openImg3 && (
-          <div
-            onClick={() => setOpenImg3(false)}
-            className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-md z-50"
+        {/* > 3 imagens: carrossel shadcn/embla */}
+        {useCarousel && (
+          <Carousel 
+          opts={{ align: "start", loop: true }} 
+          className="relative"
+          plugins={[
+            Autoplay({
+              delay: 2500,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]}
           >
-            <img
-              src={img3}
-              alt="Exemplo grande"
-              className="max-w-[90%] max-h-[90%] rounded-xl shadow-lg"
-            />
-          </div>
+            <CarouselContent>
+              {images.map((img, idx) => (
+                <CarouselItem
+                  key={idx}
+                  className="basis-full sm:basis-1/2 md:basis-1/3"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setActive(idx)}
+                    className="group block overflow-hidden rounded-sm"
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  </button>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+          
+          </Carousel>
         )}
       </div>
+
+      {/* Lightbox */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setActive(null)}
+        >
+          <div
+            className="relative max-w-[90vw] max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={images[active].src}
+              alt={images[active].alt}
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+            />
+            <button
+              onClick={() => setActive(null)}
+              aria-label="Fechar"
+              className="absolute text-2xl -top-3 -right-3 rounded-full bg-white/90 px-2 py-1 text-gray-900 shadow hover:bg-white"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
-};
-
-export default Galery;
+}

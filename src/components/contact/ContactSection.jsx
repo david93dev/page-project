@@ -7,8 +7,14 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsTelephone } from "react-icons/bs";
 import { LuMapPin } from "react-icons/lu";
 import CardContact from "./CardContact";
+import ContactFormCard from "./ContactFormCard";
 
 const ContactSection = () => {
+
+  const handleSubmit = (data) => {
+    console.log("Formulário enviado com os dados:", data);
+    // Aqui você pode adicionar a lógica para enviar os dados do formulário
+  };
   return (
     <div className="bg-gray-950 px-4 py-18">
       <div
@@ -66,117 +72,7 @@ const ContactSection = () => {
           </div>
 
           <div>
-            <Card className="rounded-2xl bg-gray-900 max-w-2xl mx-auto border border-gray-800">
-              <CardHeader className="flex flex-col">
-                <h2 className="text-gray-200 text-2xl font-bold">
-                  Envie sua Mensagem
-                </h2>
-                <p className="text-gray-400 text-sm">
-                  Preencha o formulário abaixo e nossa equipe entrará em contato
-                  em até 24 horas
-                </p>
-              </CardHeader>
-
-              <form className="space-y-4 px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="nome"
-                      className="text-gray-200 text-sm font-semibold"
-                    >
-                      Nome
-                    </label>
-                    <Input
-                      type="text"
-                      id="nome"
-                      name="nome"
-                      className="w-full mt-1 p-2 rounded-md
-                     bg-gray-950 border border-gray-700 text-white"
-                      placeholder="Seu nome completo"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="text-gray-200 text-sm font-semibold"
-                    >
-                      Email
-                    </label>
-                    <Input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full mt-1 p-2 rounded-md
-                     bg-gray-950 border border-gray-700 text-white"
-                      placeholder="Seu email"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="mensagem"
-                    className="text-gray-200 text-sm font-semibold"
-                  >
-                    Empresa
-                  </label>
-                  <Input
-                    type="text"
-                    id="empresa"
-                    name="empresa"
-                    className="w-full mt-1 p-2 rounded-md
-                 bg-gray-950 border border-gray-700 text-white"
-                    placeholder="Nome da sua empresa"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="projeto"
-                    className="text-gray-200 text-sm font-semibold"
-                  >
-                    Tipo de Projeto
-                  </label>
-                  <Input
-                    type="text"
-                    id="empresa"
-                    name="empresa"
-                    className="w-full mt-1 p-2 rounded-md
-                 bg-gray-950 border border-gray-700 text-white"
-                    placeholder="Ex:Plataforma de apostas esportivas"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="mensagem"
-                    className="text-gray-200 text-sm font-semibold"
-                  >
-                    Mensagem
-                  </label>
-                  <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    rows="4"
-                    className="w-full mt-1 p-2 rounded-md bg-gray-950 border border-gray-700 text-white"
-                    required
-                    placeholder="Escreva sua mensagem aqui"
-                  ></textarea>
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-green-500
-                 hover:from-green-500 hover:to-blue-500 transition-colors duration-300 hover:scale-101 text-white font-bold py-3 rounded-lg mt-2"
-                >
-                  Enviar Mensagem
-                </Button>
-              </form>
-            </Card>
+            <ContactFormCard onSubmit={handleSubmit} />
           </div>
         </div>
       </div>

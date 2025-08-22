@@ -10,7 +10,7 @@ function App() {
     AOS.init({
       duration: 800,          // duração da animação
       easing: 'ease-out',     // curva
-      once: false,             // anima só a primeira vez
+      once: true,             // anima só a primeira vez
       offset: 120,             // só anima quando entrar 80px na viewport
       delay: 100,               // atraso padrão
     });
