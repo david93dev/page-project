@@ -8,12 +8,29 @@ import { BsTelephone } from "react-icons/bs";
 import { LuMapPin } from "react-icons/lu";
 import CardContact from "./CardContact";
 import ContactFormCard from "./ContactFormCard";
+import emailJs from "@emailjs/browser";
 
 const ContactSection = () => {
 
   const handleSubmit = (data) => {
-    console.log("Formulário enviado com os dados:", data);
-    // Aqui você pode adicionar a lógica para enviar os dados do formulário
+   
+    const serviceId = import.meta.env.VITE_EMAILJS_SERV;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPL;
+    const publicKey = import.meta.env.VITE_EMAILJS_KEY;
+    const templateParams = {
+      name: data.name,
+      email: data.email,
+      company: data.company,
+      type_project: data.type_project,
+      message: data.message,
+    };
+    emailJs.send(serviceId, templateId, templateParams, publicKey)
+    .then((response) => {console.log("EMAIL ENVIADO", response.status);
+    })
+    .catch((error) => {
+      console.error("Erro ao enviar email:", error);
+    })
+   
   };
   return (
     <div className="bg-gray-950 px-4 py-18">

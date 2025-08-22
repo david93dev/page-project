@@ -21,7 +21,7 @@ export default function ContactForm({ onSubmit }) {
           <Input
             type="text"
             id="nome"
-            name="nome"
+            name="name"
             className={baseInput}
             placeholder="Seu nome completo"
             autoComplete="name"
@@ -46,7 +46,7 @@ export default function ContactForm({ onSubmit }) {
         <Input
           type="text"
           id="empresa"
-          name="empresa"
+          name="company"
           className={baseInput}
           placeholder="Nome da sua empresa"
           autoComplete="organization"
@@ -58,7 +58,7 @@ export default function ContactForm({ onSubmit }) {
         <Input
           type="text"
           id="tipoProjeto"
-          name="tipoProjeto"
+          name="type_project"
           className={baseInput}
           placeholder="Ex: Plataforma de apostas esportivas"
           required
@@ -67,8 +67,8 @@ export default function ContactForm({ onSubmit }) {
 
       <FormField id="mensagem" label="Mensagem">
         <textarea
-          id="mensagem"
-          name="mensagem"
+          id="message"
+          name="message"
           rows="4"
           className={`${baseInput} resize-y`}
           placeholder="Escreva sua mensagem aqui"
