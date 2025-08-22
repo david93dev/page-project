@@ -51,6 +51,7 @@ const Header = () => {
 
         <div className="hidden md:block">
           <Button
+            onClick={() => (window.location.href = "#contato")}
             className=" py-3 font-bold bg-gradient-to-r from-blue-500 to-green-500 
               rounded-lg text-white hover:scale-105
               hover:from-green-500 hover:to-blue-600 transition duration-300 flex items-center gap-2"
@@ -100,6 +101,7 @@ const Header = () => {
           </ul>
 
           <Button
+            onClick={() => (window.location.href = "#contato")}
             className="w-full font-bold bg-gradient-to-r from-blue-500 to-green-500 
               rounded-lg py-3 text-white shadow-[0_0_1px_white]
               hover:from-blue-600 hover:to-green-600 transition duration-300 flex items-center justify-center gap-2"
