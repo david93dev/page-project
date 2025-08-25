@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../../assets/img/img1.png";
-import img2 from "../../assets/img/img2.png";
-import img3 from "../../assets/img/img3.png";
+import img1 from "../../assets/img/img1.webp";
+import img2 from "../../assets/img/img2.webp";
+import img3 from "../../assets/img/img3.webp";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronRight } from 'lucide-react';
 import {

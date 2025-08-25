@@ -5,86 +5,80 @@ import logo from "../../assets/img/Logo-Head.webp";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full bg-black">
+    <section className="relative isolate min-h-[100svh] w-full bg-black">
       {/* Imagem de fundo */}
       <img
         src={hero}
         alt="Imagem principal do site"
-        className="absolute inset-0 w-full h-full object-cover"
-        loading="eager" // eager se for a primeira imagem que aparece
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
       />
 
-      {/* Overlay (degradê preto transparente) */}
-      <div className="absolute inset-0 bg-gray-950/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
-      {/* Conteúdo sobre a imagem */}
-      <div className="mt-18 md:mt-26 absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <div className="mb-6 w-auto sm:w-64 lg:w-80 2xl:w-96">
-          <img src={logo} alt="bg-logo" className="" />
-        </div>
-        <h1
-          className=" text-4xl text-gray-200
-         md:text-5xl lg:text-6xl 2xl:text-7xl font-bold drop-shadow-lg"
-        >
-          LMR{" "}
-          <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
-            Tech Solutions
-          </span>
-        </h1>
-        <p className="mt-6 text-white text-lg md:text-xl 2xl:text-2xl max-w-2xl drop-shadow">
-          Soluções inovadoras para o mercado de apostas no Brasil
-        </p>
-        <p className="mt-6 text-white text-sm md:text-lg 2xl:text-2xl max-w-xl drop-shadow">
-          Operadora brasileira com licenças federais e experiência consolidada
-          no setor de apostas esportivas e cassino online. Posicionados
-          estrategicamente para a regulamentação do mercado brasileiro.
-        </p>
-
-        <div className="flex flex-row flex-wrap mt-6 justify-center items-center gap-2">
-          <Button
-            onClick={() => (window.location.href = "#servicos")}
-            className="flex justify-center items-center 
-          hover:scale-105 text-xs gap-2 w-28 md:w-42 py-5 bg-blue-500 hover:bg-blue-400
-            hover:border-blue-500 rounded-lg text-white font-semibold shadow-lg
-             transition"
-          >
-            Saiba mais <FaArrowRight />
-          </Button>
-          <Button
-            onClick={() => (window.location.href = "#contato")}
-            className="flex justify-center items-center 
-         hover:scale-105 text-xs gap-2  w-28 md:w-42 py-5 bg-transparent hover:bg-blue-400 border
-          border-blue-500 hover:border-blue-500 rounded-lg text-blue-500 hover:text-white 
-          font-semibold shadow-lg transition"
-          >
-            Entre em contato
-          </Button>
-        </div>
-
-        <div className="grid grid-cols-3 gap-4 mt-8">
-          <div>
-            <h3 className="text-blue-500 font-extrabold text-2xl 2xl:text-4xl">
-              24/7
-            </h3>
-            <p className="text-sm 2xl:text-lg text-gray-300">
-              Operação Contínua
-            </p>
+      {/* Conteúdo */}
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-screen-xl items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="flex w-full max-w-3xl flex-col items-center text-center">
+          <div className="mb-6 w-[min(72vw,18rem)] sm:w-[16rem] lg:w-[20rem] 2xl:w-[24rem]">
+            <img src={logo} alt="Logo LMR Tech Solutions" className="w-full h-auto" />
           </div>
-          <div>
-            <h3 className="text-blue-500 font-extrabold text-2xl 2xl:text-4xl">
-              7+
-            </h3>
-            <p className="text-sm 2xl:text-lg text-gray-300">
-              Sites em Operação
-            </p>
+
+          <h1 className="text-balance font-bold tracking-tight drop-shadow-lg text-white text-[clamp(1.75rem,5vw,3.5rem)]">
+            LMR{" "}
+            <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
+              Tech Solutions
+            </span>
+          </h1>
+
+          <p className="mt-4 text-pretty text-base text-gray-100 drop-shadow sm:text-lg 2xl:text-xl">
+            Soluções inovadoras para o mercado de apostas no Brasil
+          </p>
+
+          <p className="mt-3 max-w-[60ch] text-pretty text-sm text-gray-200 drop-shadow sm:text-base 2xl:text-lg">
+            Operadora brasileira com licenças federais e experiência consolidada no setor de apostas
+            esportivas e cassino online. Posicionados estrategicamente para a regulamentação do
+            mercado brasileiro.
+          </p>
+
+          {/* Botões: empilha no mobile, lado a lado no ≥sm */}
+          <div className="mt-6 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <Button
+              onClick={() => (window.location.href = "#servicos")}
+              className="w-full sm:w-auto px-5 py-4 text-sm font-semibold rounded-lg
+                         bg-blue-500 hover:bg-blue-400 transition will-change-transform hover:scale-[1.02]
+                         shadow-lg inline-flex items-center justify-center gap-2"
+            >
+              Saiba mais <FaArrowRight />
+            </Button>
+
+            <Button
+              onClick={() => (window.location.href = "#contato")}
+              className="w-full sm:w-auto px-5 py-4 text-sm font-semibold rounded-lg
+                         border border-blue-500 text-blue-500 hover:text-white
+                         bg-transparent hover:bg-blue-400 transition will-change-transform hover:scale-[1.02]
+                         shadow-lg inline-flex items-center justify-center gap-2"
+              variant="outline"
+            >
+              Entre em contato
+            </Button>
           </div>
-          <div>
-            <h3 className="text-blue-500 font-extrabold text-2xl 2xl:text-4xl">
-              5+
-            </h3>
-            <p className="text-sm 2xl:text-lg text-gray-300">
-              Anos de Experiência
-            </p>
+
+          {/* Métricas: 1 col no mobile, 3 col a partir de sm */}
+          <div className="mt-8 flex justify-center w-full max-w-2xl gap-4">
+            <div className="text-center">
+              <h3 className="text-3xl font-extrabold text-blue-500 sm:text-4xl 2xl:text-5xl">24/7</h3>
+              <p className="text-sm text-gray-300 sm:text-base 2xl:text-lg">Operação Contínua</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-3xl font-extrabold text-blue-500 sm:text-4xl 2xl:text-5xl">7+</h3>
+              <p className="text-sm text-gray-300 sm:text-base 2xl:text-lg">Sites em Operação</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-3xl font-extrabold text-blue-500 sm:text-4xl 2xl:text-5xl">5+</h3>
+              <p className="text-sm text-gray-300 sm:text-base 2xl:text-lg">Anos de Experiência</p>
+            </div>
           </div>
         </div>
       </div>
