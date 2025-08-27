@@ -11,9 +11,6 @@ const Hero = () => {
         src={hero}
         alt="Imagem principal do site"
         className="absolute inset-0 h-full w-full object-cover"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
       />
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
